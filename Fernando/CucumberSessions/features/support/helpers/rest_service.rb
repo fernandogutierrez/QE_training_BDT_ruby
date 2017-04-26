@@ -1,7 +1,7 @@
 require 'net/http'
 
 module Rest_service
-  HTTP_TIMEOUT_FOR_RESPONSE = 180
+  HTTP_TIMEOUT_FOR_RESPONSE = $app_timeout
   #
   # This method set up a connection 
   #
