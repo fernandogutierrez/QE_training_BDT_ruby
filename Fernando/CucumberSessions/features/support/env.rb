@@ -30,4 +30,5 @@ AfterConfiguration do |config|
   $app_host = configuration['app']['host']
   $app_port = configuration['app']['port']
   $app_root = configuration['app']['rootPath']
+  $app_timeout = configuration['app']['timeout']
 end
