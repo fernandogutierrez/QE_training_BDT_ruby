@@ -1,0 +1,19 @@
+1./ in dev  ->  feature en desarrollo
+2./ non-deterministic test -> tining issue
+
+
+@in_dev  
+
+
+
+1. load configuration file
+2. recognize 
+      YML 
+
+
+********************************
+primero ejecuta:
+   1) after configuration - hook
+   2) codigo que hay en env.rb
+  3) support 
+  4) steps definition
