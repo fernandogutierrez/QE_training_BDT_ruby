@@ -6,6 +6,7 @@ class ClientsManager
 	    @clients =  clients
         @clients_total_price = clients_t_price    
 	end
+
 end
 
 def clients_manager
