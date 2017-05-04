@@ -6,7 +6,7 @@ When (/I have filters by default in my account/) do
 	puts "I have filters by default in my account"
 end
 
-When(/^I send a (GET) request to (\/filters\.json)$/) do |method, end_point|
+When(/^I send a (GET) request to ([a-zA-Z]+.json)$/) do |method,end_point|
 	http_request = Rest_service.get_request(method, end_point)
 	@http_response = Rest_service.execute_request(@http_connection, http_request)
 	@last_json = @http_response.body
@@ -31,7 +31,9 @@ Then(/^I expect the default filter names in the response$/) do |table|
 		field_value = get_value_from_json(@json_array_response[index], "Content")
 		puts "*** From table: #{index}, #{value} - From response: #{field_value}" 
 
-		# I had to use gsub because the value from the table was like this ["Inbox"] VS "Inbox" and was failing the comparison, if we can improve this it will be great
+		# I had to use gsub because the value from the table was 
+		# like this ["Inbox"] VS "Inbox" and was failing the comparison,
+		# if we can improve this it will be great
 		expect(value.to_s.gsub(/[\[\]\\""]/, '')).to eql(field_value)
 	end
 end
