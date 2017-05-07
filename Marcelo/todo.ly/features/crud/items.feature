@@ -1,4 +1,4 @@
-@crud @items @template
+@crud @items
 Feature: Test todo.ly API items
 
   Scenario: Verify that the schema of the json response contains all keys
